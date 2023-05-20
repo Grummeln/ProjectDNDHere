@@ -1,0 +1,784 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Character Name -->
+        <EditText
+            android:id="@+id/character_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Character Name"/>
+
+        <!-- Class and Level -->
+        <EditText
+            android:id="@+id/character_class"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Class"/>
+        <EditText
+            android:id="@+id/level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Level"/>
+
+        <!-- Background -->
+        <EditText
+            android:id="@+id/background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Background"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/armor_class"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint = "Armor Class"
+            />
+        <EditText
+            android:id="@+id/initiative"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint = "Initiative"
+            />
+
+        <EditText
+            android:id="@+id/passive_perception"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint = "Passive perception"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+    <!-- Stats Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Ability Scores -->
+        <TextView
+            android:id="@+id/ability_scores_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ability Scores"
+            android:textSize="20sp"/>
+
+        <!-- Strength -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STR"/>
+
+            <EditText
+                android:id="@+id/strength_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/strength_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+        </LinearLayout>
+
+        <!-- Dexterity -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEX"/>
+
+            <EditText
+                android:id="@+id/dexterity_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/dexterity_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+        </LinearLayout>
+
+        <!-- Constitution -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CON"/>
+
+            <EditText
+                android:id="@+id/constitution_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/constitution_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+        </LinearLayout>
+
+        <!-- Intelligence -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INT"/>
+
+            <EditText
+                android:id="@+id/intelligence_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/intelligence_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+        </LinearLayout>
+
+        <!-- Wisdom -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WIS"/>
+
+            <EditText
+                android:id="@+id/wisdom_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/wisdom_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+        </LinearLayout>
+
+        <!-- Charisma -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHA"/>
+
+            <EditText
+                android:id="@+id/charisma_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/charisma_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- Armor Class -->
+
+    <!-- Skills Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Skills -->
+        <TextView
+            android:id="@+id/skills_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skills"
+            android:textSize="20sp"/>
+
+        <!-- Acrobatics -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acrobatics (DEX)"/>
+
+            <EditText
+                android:id="@+id/acrobatics_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/acrobatics_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Animal Handling -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animal Handling (WIS)"/>
+
+            <EditText
+                android:id="@+id/animal_handling_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/animal_handling_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Arcana -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arcana (INT)"/>
+
+            <EditText
+                android:id="@+id/arcana_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/arcana_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Athletics -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Athletics (STR)"/>
+
+            <EditText
+                android:id="@+id/athletics_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/athletics_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Deception -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deception (CHA)"/>
+
+            <EditText
+                android:id="@+id/deception_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/deception_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- History -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History (INT)"/>
+
+            <EditText
+                android:id="@+id/history_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+            <CheckBox
+                android:id="@+id/history_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Insight -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insight (WIS)"/>
+
+            <EditText
+                android:id="@+id/insight_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/insight_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Intimidation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intimidation (CHA)"/>
+
+            <EditText
+                android:id="@+id/intimidation_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/intimidation_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Investigation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Investigation (INT)"/>
+
+            <EditText
+                android:id="@+id/investigation_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/investigation_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Medicine -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine (WIS)"/>
+
+            <EditText
+                android:id="@+id/medicine_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/medicine_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Nature -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nature (INT)"/>
+
+            <EditText
+                android:id="@+id/nature_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+            <CheckBox
+                android:id="@+id/nature_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Perception -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perception (WIS)"/>
+
+            <EditText
+                android:id="@+id/perception_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/perception_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Performance -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Performance (CHA)"/>
+
+            <EditText
+                android:id="@+id/performance_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/performance_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Persuasion -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Persuasion (CHA)"/>
+
+            <EditText
+                android:id="@+id/persuasion_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/persuasion_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Religion -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Religion (INT)"/>
+
+            <EditText
+                android:id="@+id/religion_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/religion_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Sleight of Hand -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sleight of Hand (DEX)"/>
+            <EditText
+                android:id="@+id/sleight_of_hand_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/sleight_of_hand_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Stealth -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stealth (DEX)"/>
+
+            <EditText
+                android:id="@+id/stealth_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/stealth_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <!-- Survival -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Survival (WIS)"/>
+
+            <EditText
+                android:id="@+id/survival_modifier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Modifier"/>
+
+            <CheckBox
+                android:id="@+id/survival_proficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proficient"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <!-- Equipment -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Equipment" />
+
+            <EditText
+                android:id="@+id/features_and_traits_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter features and traits here" />
+
+            <EditText
+                android:id="@+id/equipment_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter equipment here" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <!-- Features and Traits -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Features and Traits" />
+
+            <Button
+                android:id="@+id/save_as_pdf_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save as PDF" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
